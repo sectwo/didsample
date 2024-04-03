@@ -1,0 +1,56 @@
+{
+ "@context": [
+  "https://www.w3.org/2018/credentials/v1"
+ ],
+ "type": [
+  "VerifiablePresentation"
+ ],
+ "issuer": "did:method:specd4428336b652fe61f4318ab28c908ea76a1586f0acba5a583376c97ed2558846",
+ "created": "1712110463809377000",
+ "verifiableCredential": {
+  "@context": null,
+  "type": null,
+  "version": "",
+  "issuer": "",
+  "issuanceDate": "",
+  "expirationDate": "",
+  "credentialSubject": {
+   "id": "did:method:specd4428336b652fe61f4318ab28c908ea76a1586f0acba5a583376c97ed2558846",
+   "name": "",
+   "photo": "",
+   "identifier": "",
+   "company": "",
+   "department": "",
+   "position": "",
+   "status": "",
+   "email": "",
+   "telephone": "",
+   "address": "",
+   "gender": "",
+   "created": "",
+   "updated": ""
+  },
+  "signature": {
+   "r": null,
+   "s": null
+  },
+  "proof": {
+   "type": "ECDSA",
+   "created": "1712110463808659000",
+   "proofPurpose": "authentication",
+   "verificationMethod": "did:method:spec78c295361e2b29fe9868ea2b0a752becde1a4051cd517b73d4d78c41857c7faf#key-1",
+   "proofValue": "sign for proof"
+  }
+ },
+ "signature": {
+  "r": "jYk/8iKrcaMbAmFMUZ5me/qmFOI4rE26cgq14YufymM=",
+  "s": "/lQQTcvC9IVMC+qCQ3AslY1TcoZvazaQOTiYP8cvAgA="
+ },
+ "proof": {
+  "type": "ECDSA",
+  "created": "1712110463809377000",
+  "proofPurpose": "authentication",
+  "verificationMethod": "did:method:specd4428336b652fe61f4318ab28c908ea76a1586f0acba5a583376c97ed2558846key-1",
+  "proofValue": "sing for VP using Holder Public Key"
+ }
+}
