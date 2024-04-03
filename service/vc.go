@@ -47,7 +47,7 @@ func GenerateVC(holderDID *model.DidInfo, issuerDID *model.DidInfo, claims *mode
 	vc.CredentialSubject.Name = claims.Name
 	vc.CredentialSubject.Photo = "Photo Link"
 	vc.CredentialSubject.Identifier = claims.Identifier
-	vc.CredentialSubject.Company = "BU"
+	vc.CredentialSubject.Company = "ABC Company"
 	vc.CredentialSubject.Department = "Blockchain Center"
 	vc.CredentialSubject.Position = "Researcher"
 	vc.CredentialSubject.Status = "Working"
