@@ -1,22 +1,9 @@
 package main
 
 import (
-	"didSample/model"
 	"didSample/service"
 	"fmt"
 )
-
-func createClaimsSample() *model.Claims {
-	claims := &model.Claims{
-		Name:        "Sujan",
-		Identifier:  "a123456789",
-		Telephone:   "010-0000-0000",
-		Address:     "Seoul City",
-		Email:       "aaa@example.com",
-		Description: "employer",
-	}
-	return claims
-}
 
 func main() {
 	fmt.Println("DID SAMPLE")
@@ -36,7 +23,7 @@ func main() {
 
 	// 2. Holder와 Issuer DID를 기반으로 VC 생성 및 서명 생성
 	//holderDID := holderDidInfo.DID
-	claims := createClaimsSample()
+	claims := service.CreateClaimsSample()
 	vc := service.GenerateVC(holderDidInfo, issuerDidInfo, claims)
 
 	// 2-1. vc 검증 테스트

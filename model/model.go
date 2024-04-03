@@ -8,11 +8,11 @@ type DidInfo struct {
 }
 
 type DocumentInfo struct {
-	Context        []string  `json:"@context"` //22.05.19_sujin : 추가
+	Context        []string  `json:"@context"`
 	Id             string    `json:"id"`
-	Created        string    `json:"created"`        //(Unix Timestamp string)
-	Authentication []string  `json:"authentication"` //(limit 지정해줘야될듯)
-	Service        []Service `json:"service"`        //(structure)
+	Created        string    `json:"created"`
+	Authentication []string  `json:"authentication"`
+	Service        []Service `json:"service"`
 }
 
 type Service struct {
@@ -31,21 +31,21 @@ type VCInfo struct {
 	Type              []string   `json:"type"`
 	Version           string     `json:"version"`
 	Issuer            string     `json:"issuer"`
-	IssuanceDate      string     `json:"issuanceDate"`        //(Unix Timestamp string)
-	ExpirationDate    string     `json:"expirationDate"`      //(Unix Timestamp string)
-	CredentialSubject Credential `json:"credentialSubject"`   //(structure)
+	IssuanceDate      string     `json:"issuanceDate"`
+	ExpirationDate    string     `json:"expirationDate"`
+	CredentialSubject Credential `json:"credentialSubject"`
 	Signature         Signature  `json:"signature,omitempty"` // 서명은 옵셔널 필드
-	Proof             Proof      `json:"proof"`               //(structure)
+	Proof             Proof      `json:"proof"`
 }
 
 type VPInfo struct {
 	Context              []string  `json:"@context"`
 	Type                 []string  `json:"type"`
 	Presenter            string    `json:"issuer"`
-	Created              string    `json:"created"` //(Unix Timestamp string)
+	Created              string    `json:"created"`
 	VerifiableCredential VCInfo    `json:"verifiableCredential"`
 	Signature            Signature `json:"signature,omitempty"` // 서명은 옵셔널 필드
-	Proof                Proof     `json:"proof"`               //(structure)
+	Proof                Proof     `json:"proof"`
 }
 
 type Credential struct {
