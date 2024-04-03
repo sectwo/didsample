@@ -12,7 +12,7 @@ func createClaimsSample() *model.Claims {
 		Identifier:  "a123456789",
 		Telephone:   "010-0000-0000",
 		Address:     "Seoul City",
-		Email:       "aaa@bu.com",
+		Email:       "aaa@example.com",
 		Description: "employer",
 	}
 	return claims
