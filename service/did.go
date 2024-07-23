@@ -10,11 +10,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 )
 
 func GenerateDID(uid string) (*model.DidInfo, *model.DocumentInfo) {
-	fmt.Println("DID Generating...")
+	log.Println("DID Generating...")
 	// 1. KeyPair 생성
 	didStr := "did:method:spec"
 	keyPair := key.GenerateKeyPair(uid)
@@ -39,11 +40,12 @@ func GenerateDID(uid string) (*model.DidInfo, *model.DocumentInfo) {
 	/*
 		이후 블록체인에 등록과정 필요
 	*/
-	fmt.Println("DID Generate Success!!\n")
+	log.Println("DID Generate Success!!")
 	return holder, document
 }
 
 func GenerateDIDDocument(holder model.DidInfo) *model.DocumentInfo {
+	log.Println("DID Document Generating...")
 	services := serviceSample(holder)
 	newDocument := &model.DocumentInfo{
 		Context:        []string{"https://www.w3.org/ns/did/v1"},
@@ -54,6 +56,7 @@ func GenerateDIDDocument(holder model.DidInfo) *model.DocumentInfo {
 	}
 
 	CreateDocumentJson(newDocument)
+	log.Println("DID Document Generate Success!!")
 	return newDocument
 }
 
