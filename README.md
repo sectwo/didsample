@@ -24,6 +24,6 @@ DID/DID Document Example
 추가 
 - 서명 테스트를 위하여 Proof의 내용만을 기준으로 서명을 진행
 - Proof JSON 마샬링 이후 SHA-256을 사용하여 해싱 진행
-- vC의 경우 Holder의 개인키를 통하여 
+- vC의 경우 Holder의 개인키를 통하여 생성
 - Issuer의 개인키를 통하여 서명을 진행하였으며, ECDSA 알고리즘을 사용하여 서명과 검증에 필요한 r, s 값 생성
 - VC와 VP는 서명시 사용된 키쌍중 공개키를 사용하여 검증 진행 
