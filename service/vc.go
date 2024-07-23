@@ -34,6 +34,7 @@ func GenerateVC(holderDID *model.DidInfo, issuerDID *model.DidInfo, claims *mode
 	/*
 		블록체인에서 DID와 DID Document 를 호출하였다고 가정하에 VC 생성 프로세스 진행
 	*/
+	fmt.Println("VC(Verifiable Credential) Generating...")
 	vc := &model.VCInfo{}
 
 	vc.Context = []string{"https://www.w3.org/2018/credentials/v1"}
@@ -71,6 +72,8 @@ func GenerateVC(holderDID *model.DidInfo, issuerDID *model.DidInfo, claims *mode
 	vc.Signature.R = r
 	vc.Signature.S = s
 
+	fmt.Println("VC(Verifiable Credential) Generate Success!!")
+	fmt.Println()
 	CreateVCJson(vc)
 	return *vc
 }

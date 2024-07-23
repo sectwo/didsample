@@ -54,6 +54,7 @@ func createSamplePresentation(vc model.VCInfo) model.VCInfo {
 }
 
 func GenerateVP(holderDID *model.DidInfo, issuerDID *model.DidInfo, vc model.VCInfo) model.VPInfo {
+	fmt.Println("VP(Verifiable Credential) Generating...")
 	presentation := createSamplePresentation(vc)
 
 	vp := &model.VPInfo{
@@ -68,7 +69,7 @@ func GenerateVP(holderDID *model.DidInfo, issuerDID *model.DidInfo, vc model.VCI
 	// 서명 (VC Proof의 내용을 사용하여)
 	r, s, _ := singVP(holderDID, vp)
 
-	fmt.Println("vp sign")
+	fmt.Println("ECDSA Value... ")
 	fmt.Println("r : ", r)
 	fmt.Println("s : ", s)
 
@@ -76,11 +77,13 @@ func GenerateVP(holderDID *model.DidInfo, issuerDID *model.DidInfo, vc model.VCI
 	vp.Signature.S = s
 
 	CreateVPJson(vp)
-
+	fmt.Println("VP(Verifiable Credential) Generate Success!!")
+	fmt.Println()
 	return *vp
 }
 
 func singVP(didInfo *model.DidInfo, vp *model.VPInfo) ([]byte, []byte, error) {
+	fmt.Println("VP signing...")
 	vpProofBytes, err := json.Marshal(vp.Proof)
 	if err != nil {
 		return nil, nil, err

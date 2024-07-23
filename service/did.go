@@ -14,10 +14,11 @@ import (
 )
 
 func GenerateDID(uid string) (*model.DidInfo, *model.DocumentInfo) {
+	fmt.Println("DID Generating...")
 	// 1. KeyPair 생성
 	didStr := "did:method:spec"
 	keyPair := key.GenerateKeyPair(uid)
-	fmt.Println(keyPair)
+	//fmt.Println(keyPair)
 
 	holder := &model.DidInfo{
 		PrvKey:  keyPair.PrvKey,
@@ -38,7 +39,7 @@ func GenerateDID(uid string) (*model.DidInfo, *model.DocumentInfo) {
 	/*
 		이후 블록체인에 등록과정 필요
 	*/
-
+	fmt.Println("DID Generate Success!!\n")
 	return holder, document
 }
 

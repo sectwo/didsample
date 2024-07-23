@@ -2,19 +2,19 @@
  "@context": [
   "https://www.w3.org/ns/did/v1"
  ],
- "id": "did:method:spec6407b86b93a697c6472f4d59e484e2a3eb5fddfafccb5f82f448f97e922aeb34",
- "created": "1721745881460040400",
+ "id": "did:method:spec73a485150486f207afcccb11839443d2d890b87f581884961a40548046bd3ac0",
+ "created": "1721747256641423100",
  "authentication": [
-  "did:method:spec6407b86b93a697c6472f4d59e484e2a3eb5fddfafccb5f82f448f97e922aeb34#keys-1"
+  "did:method:spec73a485150486f207afcccb11839443d2d890b87f581884961a40548046bd3ac0#keys-1"
  ],
  "service": [
   {
-   "id": "did:method:spec6407b86b93a697c6472f4d59e484e2a3eb5fddfafccb5f82f448f97e922aeb34#EmployeeAuth",
+   "id": "did:method:spec73a485150486f207afcccb11839443d2d890b87f581884961a40548046bd3ac0#EmployeeAuth",
    "type": "AuthenticateEmployee",
    "serviceEndpoint": "https://did.sample.com/employeeAuth/"
   },
   {
-   "id": "did:method:spec6407b86b93a697c6472f4d59e484e2a3eb5fddfafccb5f82f448f97e922aeb34#EmployeeList",
+   "id": "did:method:spec73a485150486f207afcccb11839443d2d890b87f581884961a40548046bd3ac0#EmployeeList",
    "type": "employeeList",
    "serviceEndpoint": "https://did.sample.com/employeeList/"
   }
